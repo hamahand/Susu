@@ -1,0 +1,145 @@
+services:
+  # PostgreSQL Database
+  db:
+    image: postgres:15-alpine
+    container_name: sususave_db
+    environment:
+      POSTGRES_USER: sususer
+      POSTGRES_PASSWORD: suspass
+      POSTGRES_DB: sususave
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sususer -d sususave"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - sususave_network
+
+  # Redis (For USSD session storage)
+  redis:
+    image: redis:7-alpine
+    container_name: sususave_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - sususave_network
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: development
+    container_name: sususave_backend
+    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env.docker
+    environment:
+      - DATABASE_URL=postgresql://sususer:suspass@db:5432/sususave
+      - REDIS_URL=redis://redis:6379/0
+      - USE_REDIS=True
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - /app/venv
+    restart: unless-stopped
+    networks:
+      - sususave_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Web App (PWA)
+  webapp:
+    build:
+      context: ./web/app
+      dockerfile: Dockerfile
+      target: development
+    container_name: sususave_webapp
+    ports:
+      - "5173:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    volumes:
+      - ./web/app:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - sususave_network
+    stdin_open: true
+    tty: true
+
+  # Admin Panel
+  admin:
+    build:
+      context: ./web/admin
+      dockerfile: Dockerfile
+      target: development
+    container_name: sususave_admin
+    ports:
+      - "5174:3001"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    volumes:
+      - ./web/admin:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - sususave_network
+    stdin_open: true
+    tty: true
+
+  # Nginx (Production reverse proxy - optional)
+  nginx:
+    image: nginx:alpine
+    container_name: sususave_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - backend
+      - webapp
+      - admin
+    restart: unless-stopped
+    networks:
+      - sususave_network
+    profiles:
+      - production
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  sususave_network:
+    driver: bridge
+

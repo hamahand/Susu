@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="url(#gradient)"/>
+  
+  <!-- Three overlapping circles representing community saving -->
+  <circle cx="24" cy="34" r="8" fill="white" opacity="0.3"/>
+  <circle cx="40" cy="34" r="8" fill="white" opacity="0.3"/>
+  <circle cx="32" cy="26" r="8" fill="white" opacity="0.4"/>
+  
+  <!-- Cedi Symbol -->
+  <text x="32" y="38" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">₵</text>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+</svg>
+

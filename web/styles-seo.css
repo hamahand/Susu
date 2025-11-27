@@ -1,0 +1,490 @@
+/* ========================================
+   SEO Landing Page - Affiliate Sections
+   ======================================== */
+
+/* Affiliate Banner Styles */
+.affiliate-banner {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-top: 3px solid var(--accent);
+    border-bottom: 3px solid var(--accent);
+}
+
+.affiliate-banner.alternate {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border-color: var(--primary);
+}
+
+.affiliate-content {
+    text-align: left;
+}
+
+.affiliate-content.centered {
+    text-align: center;
+}
+
+.affiliate-label {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.affiliate-content h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.affiliate-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.affiliate-disclaimer {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.btn-affiliate {
+    background: var(--accent);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.39);
+}
+
+.btn-affiliate:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgba(245, 158, 11, 0.39);
+}
+
+.btn-accent:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+/* Affiliate Products Section */
+.affiliate-products {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+}
+
+.affiliate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.affiliate-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.affiliate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary);
+}
+
+.affiliate-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.affiliate-card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.affiliate-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.affiliate-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.affiliate-features li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.affiliate-features li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--secondary);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.btn-outline {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Footer Disclaimer */
+.footer-disclaimer {
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+    opacity: 0.8;
+}
+
+/* SEO Enhancements */
+.hero-subtitle,
+.section-subtitle,
+.step-description,
+.feature-description {
+    /* Better readability for SEO */
+    line-height: 1.7;
+}
+
+/* Structured Data Visual Indicators (for development) */
+[itemscope] {
+    position: relative;
+}
+
+/* Improved Image Alt Text Display on Error */
+img[alt]:not([src]) {
+    display: inline-block;
+    padding: 2rem;
+    background: var(--bg-tertiary);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Better Link Accessibility for Affiliate Links */
+a[rel*="sponsored"],
+a[rel*="nofollow"] {
+    /* Ensure affiliate links are clearly styled */
+    text-decoration: none;
+}
+
+a[rel*="sponsored"]:hover,
+a[rel*="nofollow"]:hover {
+    text-decoration: none;
+}
+
+/* Mobile Optimization for Affiliate Sections */
+@media (max-width: 968px) {
+    .affiliate-banner {
+        padding: 2rem 0;
+    }
+
+    .affiliate-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .affiliate-content p {
+        font-size: 1rem;
+    }
+
+    .affiliate-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .affiliate-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .affiliate-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .btn-affiliate,
+    .btn-accent {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .affiliate-badge {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.75rem;
+    }
+}
+
+/* Print Styles for SEO/Sharing */
+@media print {
+    .affiliate-banner,
+    .affiliate-products,
+    .navbar,
+    .footer {
+        display: none;
+    }
+
+    .hero,
+    .features,
+    .how-it-works {
+        page-break-inside: avoid;
+    }
+}
+
+/* Breadcrumb Support (for future SEO enhancement) */
+.breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 0.5rem;
+    color: var(--text-light);
+}
+
+/* Rich Snippet Ratings (for future use) */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.rating-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Schema.org Microdata Visual Helper (development only) */
+.schema-highlight {
+    outline: 2px dashed #ff9800;
+    outline-offset: 2px;
+}
+
+/* Accessibility Improvements for SEO */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Loading States for Better UX/SEO */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--primary);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Social Proof Section (optional) */
+.social-proof {
+    padding: 2rem 0;
+    background: var(--bg-tertiary);
+    text-align: center;
+}
+
+.social-proof-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    opacity: 0.6;
+}
+
+.social-proof-logos img {
+    height: 40px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.social-proof-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Cookie Consent Banner (for GDPR/Privacy) */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(31, 41, 55, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.cookie-banner.show {
+    display: block;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.cookie-text {
+    flex: 1;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-cookie {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-cookie.accept {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-cookie.decline {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .btn-cookie {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,50 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="200" cy="150" r="80" fill="white" opacity="0.1"/>
+  <circle cx="1000" cy="480" r="100" fill="white" opacity="0.1"/>
+  <circle cx="150" cy="500" r="60" fill="white" opacity="0.08"/>
+  <circle cx="1050" cy="150" r="70" fill="white" opacity="0.08"/>
+  
+  <!-- Logo Icon (larger) -->
+  <circle cx="250" cy="315" r="120" fill="white" opacity="0.2"/>
+  <circle cx="200" cy="340" r="60" fill="white" opacity="0.3"/>
+  <circle cx="300" cy="340" r="60" fill="white" opacity="0.3"/>
+  <circle cx="250" cy="280" r="60" fill="white" opacity="0.4"/>
+  <text x="250" y="330" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">₵</text>
+  
+  <!-- Main Text -->
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white">
+    SusuSave
+  </text>
+  <text x="450" y="360" font-family="Arial, sans-serif" font-size="42" fill="white" opacity="0.9">
+    Save Together, Grow Together
+  </text>
+  <text x="450" y="420" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.8">
+    Ghana's #1 ROSCA Platform with Mobile Money
+  </text>
+  
+  <!-- Stats -->
+  <rect x="450" y="460" width="180" height="80" rx="10" fill="white" opacity="0.15"/>
+  <text x="540" y="495" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">1000+</text>
+  <text x="540" y="525" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.9" text-anchor="middle">Users</text>
+  
+  <rect x="650" y="460" width="180" height="80" rx="10" fill="white" opacity="0.15"/>
+  <text x="740" y="495" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">500+</text>
+  <text x="740" y="525" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.9" text-anchor="middle">Groups</text>
+  
+  <rect x="850" y="460" width="200" height="80" rx="10" fill="white" opacity="0.15"/>
+  <text x="950" y="495" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">GHS 1M+</text>
+  <text x="950" y="525" font-family="Arial, sans-serif" font-size="18" fill="white" opacity="0.9" text-anchor="middle">Saved</text>
+  
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+</svg>
+

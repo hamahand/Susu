@@ -1,0 +1,46 @@
+.
+├── backend
+│   ├── alembic
+│   │   ├── env.py
+│   │   ├── script.py.mako
+│   │   └── versions
+│   ├── alembic.ini
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── cron
+│   │   ├── database.py
+│   │   ├── integrations
+│   │   ├── main.py
+│   │   ├── models
+│   │   ├── routers
+│   │   ├── schemas
+│   │   ├── services
+│   │   └── utils
+│   ├── Dockerfile
+│   ├── env.example
+│   ├── pytest.ini
+│   ├── requirements.txt
+│   ├── run.sh
+│   ├── seed_data.py
+│   ├── test_ussd.py
+│   └── tests
+│       ├── __init__.py
+│       ├── conftest.py
+│       ├── test_auth.py
+│       └── test_groups.py
+├── docker
+├── docker-compose.yml
+├── docs
+│   ├── API.md
+│   └── DEPLOYMENT.md
+├── IMPLEMENTATION_COMPLETE.md
+├── LICENSE
+├── mobile
+├── PROJECT_STATUS.md
+├── PROJECT_TREE.txt
+├── QUICK_START.md
+├── README.md
+└── shared
+
+17 directories, 27 files

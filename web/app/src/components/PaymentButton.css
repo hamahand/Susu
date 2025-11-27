@@ -1,0 +1,22 @@
+.payment-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.payment-button-loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payment-button-success {
+  background-color: #10b981;
+  border-color: #10b981;
+}
+
+.payment-button-error {
+  background-color: #ef4444;
+  border-color: #ef4444;
+}
+

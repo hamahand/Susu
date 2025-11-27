@@ -1,0 +1,34 @@
+# ngrok Configuration for AfricaTalking USSD Development
+# 
+# Usage:
+#   1. Sign up at https://ngrok.com and get auth token
+#   2. Run: ngrok config add-authtoken YOUR_TOKEN
+#   3. Run: ngrok start --config ngrok.yml ussd
+#
+# Or simply: ngrok http 8000
+
+version: "2"
+authtoken: YOUR_AUTH_TOKEN_HERE
+
+tunnels:
+  ussd:
+    proto: http
+    addr: 8000
+    bind_tls: true
+    inspect: true
+    # Optional: Custom subdomain (requires paid plan)
+    # subdomain: sususave-dev
+    
+    # Optional: Basic auth for security
+    # auth: "username:password"
+    
+    # Metadata for identification
+    metadata: "SusuSave USSD Development"
+
+# Region (optional, choose closest to your location)
+# region: us, eu, ap, au, sa, jp, in
+# region: eu
+
+# Web interface (default: http://127.0.0.1:4040)
+web_addr: 127.0.0.1:4040
+

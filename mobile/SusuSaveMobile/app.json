@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "SusuSave",
+    "slug": "sususave",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "primaryColor": "#2E7D32",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2E7D32"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sususave.mobile",
+      "icon": "./assets/icon.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2E7D32"
+      },
+      "package": "com.sususave.mobile",
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "icon": "./assets/icon.png"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "SusuSave",
+      "shortName": "SusuSave",
+      "lang": "en-GH",
+      "scope": "/",
+      "themeColor": "#2E7D32",
+      "backgroundColor": "#2E7D32",
+      "display": "standalone",
+      "orientation": "portrait-primary",
+      "startUrl": "/",
+      "icons": [
+        {
+          "src": "./assets/icon.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "src": "./assets/icon.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a0155662-1497-4f91-ab19-f0de90240989"
+      }
+    }
+  }
+}

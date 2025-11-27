@@ -1,0 +1,81 @@
+#!/bin/bash
+# SusuSave Quick Command Aliases
+# Add to your .zshrc: source /Users/maham/susu/.susu_aliases
+
+# Quick start commands
+alias susu-dev='cd /Users/maham/susu && ./start-dev.sh'
+alias susu-prod='cd /Users/maham/susu && ./start-prod.sh'
+
+# Service management
+alias susu-stop='kill -9 $(lsof -ti:8000,3000,8080,8081) 2>/dev/null; pkill -f "emulator @Pixel_8_Pro" 2>/dev/null; echo "All SusuSave services stopped"'
+alias susu-logs='cd /tmp/susu_logs && ls -la'
+alias susu-logs-prod='cd /var/log/susu && ls -la'
+
+# Quick log views
+alias susu-log-backend='tail -f /tmp/susu_logs/backend.log'
+alias susu-log-pwa='tail -f /tmp/susu_logs/pwa.log'
+alias susu-log-ngrok='tail -f /tmp/susu_logs/ngrok.log'
+
+# Port checking
+alias susu-ports='echo "Checking SusuSave ports..." && lsof -i :8000,3000,8080,8081 2>/dev/null || echo "No services running"'
+
+# Status
+alias susu-status='cat /var/tmp/susu_services.txt 2>/dev/null || echo "No services running. Start with: susu-dev or susu-prod"'
+
+# Android
+alias susu-android='export ANDROID_HOME="$HOME/Library/Android/sdk" && export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" && $ANDROID_SDK_ROOT/emulator/emulator @Pixel_8_Pro &'
+alias susu-adb='$ANDROID_SDK_ROOT/platform-tools/adb devices'
+
+# Quick navigation
+alias susu='cd /Users/maham/susu'
+alias susu-backend='cd /Users/maham/susu/backend'
+alias susu-web='cd /Users/maham/susu/web'
+alias susu-mobile='cd /Users/maham/susu/mobile/SusuSaveMobile'
+
+# Ngrok
+alias susu-ngrok='curl -s http://localhost:4040/api/tunnels 2>/dev/null | grep -o "https://[^\"]*\.ngrok[^\"]*" | head -1 || echo "Ngrok not running"'
+alias susu-ngrok-dash='open http://localhost:4040'
+
+# Help
+alias susu-help='cat << EOF
+🚀 SusuSave Quick Commands
+
+Start Services:
+  susu-dev         Start development environment
+  susu-prod        Start production environment
+  susu-stop        Stop all services
+
+Logs:
+  susu-logs        View log directory
+  susu-log-backend View backend log
+  susu-log-pwa     View PWA log
+  susu-log-ngrok   View ngrok log
+
+Status:
+  susu-status      Show running services
+  susu-ports       Check which ports are in use
+  susu-ngrok       Get ngrok public URL
+
+Android:
+  susu-android     Start Android emulator
+  susu-adb         List Android devices
+
+Navigation:
+  susu             Go to project root
+  susu-backend     Go to backend folder
+  susu-web         Go to web folder
+  susu-mobile      Go to mobile folder
+
+Ngrok:
+  susu-ngrok-dash  Open ngrok dashboard
+
+Help:
+  susu-help        Show this help
+
+More info: /Users/maham/susu/QUICK_START_ALL.md
+EOF
+'
+
+echo "✅ SusuSave aliases loaded! Type 'susu-help' for commands"
+
+

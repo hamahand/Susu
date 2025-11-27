@@ -1,0 +1,34 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="1024" height="1024" rx="180" fill="url(#gradient1024)"/>
+  
+  <!-- Decorative circles representing community -->
+  <circle cx="384" cy="600" r="140" fill="white" opacity="0.12"/>
+  <circle cx="640" cy="600" r="140" fill="white" opacity="0.12"/>
+  <circle cx="512" cy="450" r="140" fill="white" opacity="0.15"/>
+  
+  <!-- Central circle with Cedi symbol -->
+  <circle cx="512" cy="512" r="280" fill="white" opacity="0.2"/>
+  <text x="512" y="630" font-family="Arial, sans-serif" font-size="340" font-weight="bold" fill="white" text-anchor="middle">₵</text>
+  
+  <!-- Corner accent circles -->
+  <circle cx="200" cy="200" r="50" fill="white" opacity="0.25"/>
+  <circle cx="824" cy="200" r="50" fill="white" opacity="0.25"/>
+  <circle cx="200" cy="824" r="50" fill="white" opacity="0.25"/>
+  <circle cx="824" cy="824" r="50" fill="white" opacity="0.25"/>
+  
+  <!-- Small connecting dots -->
+  <circle cx="300" cy="300" r="20" fill="white" opacity="0.3"/>
+  <circle cx="724" cy="300" r="20" fill="white" opacity="0.3"/>
+  <circle cx="300" cy="724" r="20" fill="white" opacity="0.3"/>
+  <circle cx="724" cy="724" r="20" fill="white" opacity="0.3"/>
+  
+  <defs>
+    <linearGradient id="gradient1024" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+</svg>
+

@@ -1,0 +1,28 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="180" height="180" rx="40" fill="url(#gradient180)"/>
+  
+  <!-- Decorative circles representing community -->
+  <circle cx="60" cy="105" r="22" fill="white" opacity="0.15"/>
+  <circle cx="120" cy="105" r="22" fill="white" opacity="0.15"/>
+  <circle cx="90" cy="75" r="22" fill="white" opacity="0.2"/>
+  
+  <!-- Central circle with Cedi symbol -->
+  <circle cx="90" cy="90" r="45" fill="white" opacity="0.25"/>
+  <text x="90" y="110" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">₵</text>
+  
+  <!-- Small accent circles -->
+  <circle cx="45" cy="45" r="8" fill="white" opacity="0.3"/>
+  <circle cx="135" cy="45" r="8" fill="white" opacity="0.3"/>
+  <circle cx="45" cy="135" r="8" fill="white" opacity="0.3"/>
+  <circle cx="135" cy="135" r="8" fill="white" opacity="0.3"/>
+  
+  <defs>
+    <linearGradient id="gradient180" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="50%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+</svg>
+

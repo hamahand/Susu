@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SusuSave Logo Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1F2937;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h2 {
+            color: #2E7D32;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .card p {
+            color: #6B7280;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .logo-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            background: #F9FAFB;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-display.dark {
+            background: #1F2937;
+        }
+        
+        .logo-display.green {
+            background: #2E7D32;
+        }
+        
+        .specs {
+            font-size: 0.85rem;
+            color: #9CA3AF;
+            font-family: monospace;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .color-swatch {
+            text-align: center;
+        }
+        
+        .color-box {
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1F2937;
+        }
+        
+        .color-hex {
+            font-size: 0.75rem;
+            color: #6B7280;
+            font-family: monospace;
+        }
+        
+        .section-title {
+            color: #1F2937;
+            margin: 3rem 0 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #2E7D32;
+            padding-bottom: 0.5rem;
+        }
+        
+        .full-width-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .og-preview {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #2E7D32;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #059669;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 SusuSave Logo & Brand Assets</h1>
+        <p class="subtitle">Complete brand identity system for web and mobile applications</p>
+        
+        <h2 class="section-title">Primary Logos</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Full Logo</h2>
+                <p>Main horizontal logo with icon and text</p>
+                <div class="logo-display">
+                    <img src="assets/logo.svg" alt="SusuSave Logo" style="width: 200px;">
+                </div>
+                <div class="specs">200 × 60px | SVG</div>
+                <a href="assets/logo.svg" download class="download-btn">Download SVG</a>
+            </div>
+            
+            <div class="card">
+                <h2>Logo on Dark</h2>
+                <p>Logo appearance on dark backgrounds</p>
+                <div class="logo-display dark">
+                    <img src="assets/logo.svg" alt="SusuSave Logo" style="width: 200px;">
+                </div>
+                <div class="specs">For dark themes</div>
+            </div>
+            
+            <div class="card">
+                <h2>Logo Icon</h2>
+                <p>Standalone circular icon for compact spaces</p>
+                <div class="logo-display">
+                    <img src="assets/logo-icon.svg" alt="SusuSave Icon" style="width: 80px;">
+                </div>
+                <div class="specs">64 × 64px | SVG</div>
+                <a href="assets/logo-icon.svg" download class="download-btn">Download SVG</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Favicons</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Main Favicon</h2>
+                <p>Primary favicon for browsers</p>
+                <div class="logo-display">
+                    <img src="assets/favicon.svg" alt="Favicon" style="width: 64px;">
+                </div>
+                <div class="specs">32 × 32px | SVG</div>
+                <a href="assets/favicon.svg" download class="download-btn">Download SVG</a>
+            </div>
+            
+            <div class="card">
+                <h2>Small Favicon</h2>
+                <p>For older browsers and small tabs</p>
+                <div class="logo-display">
+                    <img src="assets/favicon-16x16.svg" alt="Small Favicon" style="width: 32px;">
+                </div>
+                <div class="specs">16 × 16px | SVG</div>
+                <a href="assets/favicon-16x16.svg" download class="download-btn">Download SVG</a>
+            </div>
+            
+            <div class="card">
+                <h2>Apple Touch Icon</h2>
+                <p>iOS home screen and bookmark icon</p>
+                <div class="logo-display">
+                    <img src="assets/apple-touch-icon.svg" alt="Apple Touch Icon" style="width: 100px;">
+                </div>
+                <div class="specs">180 × 180px | SVG</div>
+                <a href="assets/apple-touch-icon.svg" download class="download-btn">Download SVG</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Social Media</h2>
+        <div class="full-width-card">
+            <h2>Open Graph Image</h2>
+            <p style="margin-bottom: 1.5rem;">Preview image for Facebook, Twitter, LinkedIn shares</p>
+            <img src="assets/og-image.svg" alt="Open Graph Image" class="og-preview">
+            <div class="specs" style="margin-top: 1rem; text-align: center;">1200 × 630px | SVG</div>
+            <div style="text-align: center;">
+                <a href="assets/og-image.svg" download class="download-btn">Download SVG</a>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Brand Colors</h2>
+        <div class="full-width-card">
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #2E7D32;"></div>
+                    <div class="color-name">Primary</div>
+                    <div class="color-hex">#2E7D32</div>
+                    <div class="color-hex">Emerald 500</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #059669;"></div>
+                    <div class="color-name">Primary Dark</div>
+                    <div class="color-hex">#059669</div>
+                    <div class="color-hex">Emerald 600</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #047857;"></div>
+                    <div class="color-name">Primary Darker</div>
+                    <div class="color-hex">#047857</div>
+                    <div class="color-hex">Emerald 700</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #1F2937;"></div>
+                    <div class="color-name">Text Primary</div>
+                    <div class="color-hex">#1F2937</div>
+                    <div class="color-hex">Gray 900</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #6B7280;"></div>
+                    <div class="color-name">Text Secondary</div>
+                    <div class="color-hex">#6B7280</div>
+                    <div class="color-hex">Gray 500</div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #FFFFFF; border: 1px solid #E5E7EB;"></div>
+                    <div class="color-name">Background</div>
+                    <div class="color-hex">#FFFFFF</div>
+                    <div class="color-hex">White</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="section-title">Design Concept</h2>
+        <div class="full-width-card">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <h3 style="color: #2E7D32; margin-bottom: 0.5rem;">🎯 Community</h3>
+                    <p style="color: #6B7280;">Three overlapping circles represent group savings and the ROSCA (Rotating Savings and Credit Association) concept.</p>
+                </div>
+                <div>
+                    <h3 style="color: #2E7D32; margin-bottom: 0.5rem;">💰 Currency</h3>
+                    <p style="color: #6B7280;">The Cedi symbol (₵) at the center shows Ghanaian heritage and local financial relevance.</p>
+                </div>
+                <div>
+                    <h3 style="color: #2E7D32; margin-bottom: 0.5rem;">🌱 Growth</h3>
+                    <p style="color: #6B7280;">Green gradient symbolizes financial growth, prosperity, and the savings journey.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="full-width-card" style="text-align: center; background: linear-gradient(135deg, #2E7D32 0%, #047857 100%); color: white;">
+            <h2 style="color: white; margin-bottom: 1rem;">✅ Implementation Complete!</h2>
+            <p style="margin-bottom: 1rem; opacity: 0.9;">All logo assets have been created and integrated into the web application.</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">For mobile app icons, see <code style="background: rgba(255,255,255,0.2); padding: 0.2rem 0.5rem; border-radius: 4px;">/mobile/SusuSaveMobile/assets/BRANDING_README.md</code></p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem; color: #6B7280; font-size: 0.9rem;">
+            <p>🎨 Created: October 22, 2025</p>
+            <p>Brand Colors: Emerald Green • Design: Community · Growth · Trust</p>
+        </div>
+    </div>
+</body>
+</html>
+

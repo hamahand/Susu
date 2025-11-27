@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SusuSave - Modern ROSCA platform for Ghana. Save together, grow together with automated Mobile Money integration.">
+    <meta name="keywords" content="ROSCA, Susu, Ghana, Mobile Money, Savings, MoMo">
+    <title>SusuSave - Save Together, Grow Together</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/pwa-icons/icon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/pwa-icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/pwa-icons/icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="./assets/pwa-icons/icon-64x64.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/pwa-icons/icon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="./assets/pwa-icons/icon-128x128.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/pwa-icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="./assets/pwa-icons/icon-256x256.png">
+    <link rel="icon" type="image/png" sizes="384x384" href="./assets/pwa-icons/icon-384x384.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/pwa-icons/icon-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.svg">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="msapplication-TileColor" content="#2E7D32">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="assets/logo.svg" alt="SusuSave Logo" class="logo-image">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#ussd">USSD Access</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#download" class="btn btn-primary">Open App</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Save Together,<br>
+                        <span class="gradient-text">Grow Together</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join the modern Susu revolution. Create savings groups, automate contributions, and watch your money grow with Ghana's first hybrid ROSCA platform.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/app/" class="btn btn-primary btn-large">
+                            🚀 Get Started
+                        </a>
+                        <a href="#ussd" class="btn btn-secondary btn-large">
+                            Use USSD - Coming Soon
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Active Users</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Savings Groups</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">GHS 1M+</div>
+                            <div class="stat-label">Saved Together</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <img src="assets/app-screenshot.png" alt="SusuSave App" onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything You Need to Save Smart</h2>
+                <p class="section-subtitle">Powerful features designed for the Ghanaian saver</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏦</div>
+                    <h3 class="feature-title">Automated Contributions</h3>
+                    <p class="feature-description">
+                        Set it and forget it. Your Mobile Money wallet is automatically debited on schedule. No more reminders or missed payments.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💸</div>
+                    <h3 class="feature-title">Smart Payouts</h3>
+                    <p class="feature-description">
+                        When everyone pays, the lucky recipient gets paid automatically. Fair rotation ensures everyone gets their turn.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile & USSD</h3>
+                    <p class="feature-description">
+                        Use the full-featured mobile app or simple USSD (*920*55#) on any phone. Everyone can participate.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Retry Logic</h3>
+                    <p class="feature-description">
+                        Failed payment? We automatically retry and notify you. Your contributions never get missed.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Bank-Grade Security</h3>
+                    <p class="feature-description">
+                        Encrypted data, secure authentication, and complete audit trails. Your money and data are safe.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Real-Time Dashboard</h3>
+                    <p class="feature-description">
+                        Track group progress, see who's paid, check payout dates. Full transparency for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Start saving in 3 simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Create or Join a Group</h3>
+                        <p class="step-description">
+                            Download the app and create your own savings group, or join an existing one using a group code. Set your contribution amount and schedule.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">👥</div>
+                            <p>Group: Monthly Rent Fund</p>
+                            <p class="visual-detail">GHS 50 / month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step step-reverse">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Automatic Contributions</h3>
+                        <p class="step-description">
+                            On your scheduled day, we automatically debit your Mobile Money wallet. Sit back and let your savings grow automatically.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card">
+                            <div class="visual-icon">💳</div>
+                            <p>Auto-debit from MoMo</p>
+                            <p class="visual-detail">Every 1st of month</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Get Your Payout</h3>
+                        <p class="step-description">
+                            When it's your turn in the rotation, receive the full pot directly to your Mobile Money wallet. Use it for rent, business, or emergencies.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-card success">
+                            <div class="visual-icon">🎉</div>
+                            <p>You received GHS 500!</p>
+                            <p class="visual-detail">From: Monthly Rent Fund</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USSD Section -->
+    <section id="ussd" class="ussd">
+        <div class="container">
+            <div class="ussd-content">
+                <div class="ussd-text">
+                    <h2 class="section-title">No Smartphone? No Problem</h2>
+                    <p class="ussd-description">
+                        Access SusuSave from any phone using our simple USSD interface. Perfect for members who prefer feature phones.
+                    </p>
+                    <div class="ussd-code">
+                        <span class="code-label">Dial:</span>
+                        <span class="code-value">*920*55#</span>
+                    </div>
+                    <div class="ussd-features">
+                        <div class="ussd-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Join groups with code</span>
+                        </div>
+                        <div class="ussd-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Make contributions</span>
+                        </div>
+                        <div class="ussd-feature">
+                            <span class="check-icon">✓</span>
+                            <span>Check your status</span>
+                        </div>
+                        <div class="ussd-feature">
+                            <span class="check-icon">✓</span>
+                            <span>View payout dates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ussd-phone">
+                    <div class="ussd-screen">
+                        <div class="ussd-menu">
+                            <p class="ussd-title">SusuSave</p>
+                            <p class="ussd-option">1. Join Group</p>
+                            <p class="ussd-option">2. Pay Contribution</p>
+                            <p class="ussd-option">3. Check Status</p>
+                            <p class="ussd-option">4. My Payout Date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust">
+        <div class="container">
+            <div class="trust-content">
+                <h2 class="section-title">Trusted by Thousands Across Ghana</h2>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="badge-icon">🔐</div>
+                        <h4>Bank-Level Security</h4>
+                        <p>Encrypted data & secure payments</p>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">🇬🇭</div>
+                        <h4>Made in Ghana</h4>
+                        <p>Built for Ghanaians by Ghanaians</p>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon">💯</div>
+                        <h4>100% Transparent</h4>
+                        <p>Complete audit trails & history</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is a Susu (ROSCA)?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A ROSCA (Rotating Savings and Credit Association), known as "Susu" in Ghana, is a traditional savings system where a group of people contribute a fixed amount regularly. Each period, one member receives the total pot, rotating until everyone has received their payout.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does SusuSave cost?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SusuSave is completely free to use. We don't charge any platform fees. You only pay standard Mobile Money transaction fees charged by your network provider.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Which Mobile Money providers are supported?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we support MTN Mobile Money. Support for Vodafone Cash and AirtelTigo Money is coming soon.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens if I miss a payment?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If your automatic payment fails (e.g., insufficient balance), we'll automatically retry up to 3 times and send you SMS reminders. Make sure you have sufficient balance before your contribution date.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I leave a group early?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You should complete the full rotation cycle before leaving. If you must leave early, discuss with your group admin. Outstanding contributions will need to be settled.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How secure is my money?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your money never sits with SusuSave. All transactions go directly through Mobile Money. We use bank-grade encryption for all sensitive data and maintain complete audit trails. Your phone number and financial data are encrypted.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Saving?</h2>
+                <p class="cta-subtitle">Join thousands of Ghanaians building financial security together</p>
+                <div class="cta-buttons">
+                     <a href="/app/" class="btn btn-primary btn-large" style="min-width: 220px; text-align: center;">
+                        🚀 Get Started Now
+                    </a>
+                </div>
+                <p class="cta-info">
+                    Access our Progressive Web App (PWA) • Works on any device<br>
+                    Install for offline access and app-like experience
+                </p>
+                
+                <div class="download-section">
+                    <h3 class="download-title">Download Native Apps</h3>
+                    <div class="download-badges">
+                        <div class="download-badge coming-soon">
+                            <div class="badge-content">
+                                <div class="badge-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                                    </svg>
+                                </div>
+                                <div class="badge-text">
+                                    <div class="badge-label">Download on the</div>
+                                    <div class="badge-store">App Store</div>
+                                </div>
+                            </div>
+                            <span class="coming-soon-tag">Coming Soon</span>
+                        </div>
+                        
+                        <div class="download-badge coming-soon">
+                            <div class="badge-content">
+                                <div class="badge-icon">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                                    </svg>
+                                </div>
+                                <div class="badge-text">
+                                    <div class="badge-label">GET IT ON</div>
+                                    <div class="badge-store">Google Play</div>
+                                </div>
+                            </div>
+                            <span class="coming-soon-tag">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="cta-ussd">
+                    No smartphone? Dial <strong>*920*55#</strong> from any phone
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="SusuSave" class="footer-logo-image">
+                </div>
+                    <p class="footer-tagline">
+                        Building financial inclusion,<br>one Susu at a time.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#ussd">USSD Access</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SusuSave. All rights reserved. Built with ❤️ for Ghana. ₵</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
