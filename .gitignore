@@ -26,6 +26,7 @@ venv/
 ENV/
 env/
 .venv
+.audit-venv/
 
 # IDEs
 .vscode/
@@ -54,6 +55,10 @@ postgres_data/
 sms_logs.txt
 momo_transactions.json
 logs/
+
+# Mock data (may contain sensitive test data)
+backend/mock_data/
+mock_data/
 
 # Docker
 docker-compose.override.yml

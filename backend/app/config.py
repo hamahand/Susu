@@ -6,13 +6,13 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
     
     # Database
-    DATABASE_URL: str = "postgresql://sususer:suspass@localhost:5432/sususave"
+    DATABASE_URL: str = ""  # Required: Set via environment variable
     
     # Security
-    SECRET_KEY: str = "your-secret-key-change-in-production"
+    SECRET_KEY: str = ""  # Required: Set via environment variable (generate with: openssl rand -hex 32)
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7  # 7 days
-    ENCRYPTION_KEY: Optional[str] = None  # Fernet key for field encryption
+    ENCRYPTION_KEY: Optional[str] = None  # Fernet key for field encryption (generate with: python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())")
     
     # USSD
     USSD_CODE: str = "*920*55#"
@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     ENABLE_REAL_SMS: bool = False
     ENABLE_REAL_MOMO: bool = False
     SMS_LOGS_PATH: str = "sms_logs.txt"
-    MOMO_TRANSACTIONS_PATH: str = "momo_transactions.json"
+    MOMO_TRANSACTIONS_PATH: str = "mock_data/momo_transactions.json"
     
     # Africa's Talking (USSD, SMS, Payments)
     AT_USERNAME: Optional[str] = None
@@ -30,12 +30,12 @@ class Settings(BaseSettings):
     AT_USSD_SERVICE_CODE: str = "*384*15262#"  # Your AfricaTalking USSD code
     
     # MTN API Settings
-    MTN_CONSUMER_KEY: str = "J7SH4tF6QqAsa6VYFhtGRwgpvPjYnF9y"
-    MTN_CONSUMER_SECRET: str = "1gBhKETCBKLMyILR"
+    MTN_CONSUMER_KEY: Optional[str] = None  # Required if USE_MTN_SERVICES=True
+    MTN_CONSUMER_SECRET: Optional[str] = None  # Required if USE_MTN_SERVICES=True
     MTN_ENVIRONMENT: str = "sandbox"  # or "production"
     MTN_BASE_URL: str = "https://api.mtn.com/v1"
     MTN_USSD_SERVICE_CODE: str = "*920*55#"
-    MTN_CALLBACK_URL: str = "https://76280680be24.ngrok-free.app/ussd/callback"
+    MTN_CALLBACK_URL: Optional[str] = None  # Required for USSD callbacks
     
     # MTN MoMo Settings
     MTN_MOMO_SUBSCRIPTION_KEY: Optional[str] = None

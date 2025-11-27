@@ -1,0 +1,117 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: '0 9 * * 1'
+
+jobs:
+  backend-audit:
+    name: Backend Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install pip-audit
+        run: pip install pip-audit
+      
+      - name: Run pip-audit
+        working-directory: backend
+        run: pip-audit -r requirements.txt --format=json --output=audit-results.json || true
+      
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-audit-results
+          path: backend/audit-results.json
+
+  frontend-audit:
+    name: Frontend Security Audit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project:
+          - path: web/app
+            name: PWA
+          - path: web/admin
+            name: Admin
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: ${{ matrix.project.path }}/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: ${{ matrix.project.path }}
+        run: npm ci
+      
+      - name: Run npm audit
+        working-directory: ${{ matrix.project.path }}
+        run: npm audit --production --json > audit-results.json || true
+        continue-on-error: true
+      
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ matrix.project.name }}-audit-results
+          path: ${{ matrix.project.path }}/audit-results.json
+
+  mobile-audit:
+    name: Mobile App Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.4'
+          cache: 'npm'
+          cache-dependency-path: mobile/SusuSaveMobile/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: mobile/SusuSaveMobile
+        run: npm ci
+        continue-on-error: true
+      
+      - name: Run npm audit
+        working-directory: mobile/SusuSaveMobile
+        run: npm audit --production --json > audit-results.json || true
+        continue-on-error: true
+      
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mobile-audit-results
+          path: mobile/SusuSaveMobile/audit-results.json
+
+  secret-scan:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for secret scanning
+      
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
